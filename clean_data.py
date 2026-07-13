@@ -9,7 +9,7 @@ OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "cleaned.csv")
 
 
 def load_all_periods():
-    """读取所有期的json数据"""
+    """读取所有"""
     rows = []
     files = [f for f in os.listdir(RAW_DIR) if f.startswith("period_") and f.endswith(".json")]
     files.sort(key=lambda x: int(re.findall(r"\d+", x)[0]))
